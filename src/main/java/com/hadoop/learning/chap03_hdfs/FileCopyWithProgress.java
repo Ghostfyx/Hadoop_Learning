@@ -1,4 +1,4 @@
-package com.hadoop.learning.chap03;
+package com.hadoop.learning.chap03_hdfs;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
@@ -16,7 +16,7 @@ import java.util.Date;
 /**
  * @Description: 将本地文件Copy到HDFS上
  * @Author: FanYueXiang
- * @Date: 2020/2/4 12:52 PM
+ * @Date: 2020/2/4
  */
 public class FileCopyWithProgress {
 

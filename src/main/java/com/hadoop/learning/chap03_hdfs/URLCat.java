@@ -1,4 +1,4 @@
-package com.hadoop.learning.chap03;
+package com.hadoop.learning.chap03_hdfs;
 
 import org.apache.hadoop.fs.FsUrlStreamHandlerFactory;
 import org.apache.hadoop.io.IOUtils;
@@ -9,7 +9,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
- * @Description: 通过HDFS URL读取文件
+ * @Description: 通过HDFS URL读取文件内容
  * @Author: FanYueXiang
  * @Date: 2020/2/4
  */

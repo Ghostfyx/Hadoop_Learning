@@ -1,4 +1,4 @@
-package com.hadoop.learning.chap03;
+package com.hadoop.learning.chap03_hdfs;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * @Description: 使用FileSystem的delete方法永久删除文件
  * @Author: FanYueXiang
- * @Date: 2020/2/10 8:55 AM
+ * @Date: 2020/2/10
  */
 public class DelateFile {
 

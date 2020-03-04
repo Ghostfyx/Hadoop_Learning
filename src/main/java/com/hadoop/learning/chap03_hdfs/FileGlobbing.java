@@ -1,4 +1,4 @@
-package com.hadoop.learning.chap03;
+package com.hadoop.learning.chap03_hdfs;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileStatus;
@@ -11,7 +11,7 @@ import java.net.URI;
 /**
  * @Description: Hadoop 文件通配
  * @Author: FanYueXiang
- * @Date: 2020/2/10 8:08 AM
+ * @Date: 2020/2/10
  */
 public class FileGlobbing {
 
