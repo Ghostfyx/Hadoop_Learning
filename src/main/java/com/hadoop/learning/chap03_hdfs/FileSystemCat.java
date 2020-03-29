@@ -1,33 +1,31 @@
-package com.hadoop.learning.chap03;
+package com.hadoop.learning.chap03_hdfs;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IOUtils;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
 
 /**
- * @Description: 通过FileSystem读取HDFS文件
+ * @Description: 使用FileSystem以标准输出格式显示HDFS中的文件
  * @Author: FanYueXiang
- * @Date: 2020/2/4
+ * @Date: 2020/3/29 10:00 AM
  */
 public class FileSystemCat {
 
-    public static void main(String args[]){
-        Configuration conf = new Configuration();
-        String url = args[0];
+    public static void main(String[] args) throws Exception {
+        String uri = args[0];
+        Configuration configuration = new Configuration();
+        FileSystem fs = FileSystem.get(new URI(uri), configuration);
         InputStream in = null;
         try {
-            FileSystem fs = FileSystem.get(URI.create(url),conf);
-            in = fs.open(new Path(url));
+            in = fs.open(new Path(uri));
             IOUtils.copyBytes(in, System.out, 4096, false);
-        } catch (IOException e) {
-            e.printStackTrace();
         }finally {
             IOUtils.closeStream(in);
         }
     }
+
 }
