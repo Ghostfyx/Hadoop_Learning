@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!--YARN 容量调度器配置-->
+<configuration>
+    <!--设置根调度队列-->
+    <property>
+        <name>yarn.scheduler.capacity.root.queues</name>
+        <value>prod,dev</value>
+    </property>
+
+    <!--设置dev调度队列下的叶子队列-->
+   <property>
+       <name>yarn.scheduler.capacity.root.dev.queues</name>
+       <value>eng,science</value>
+   </property>
+
+    <!--设置两个根调度队列prod与dev所占资源比例4：6-->
+    <property>
+        <name>yarn.scheduler.capacity.root.prod.capacity</name>
+        <value>40</value>
+    </property>
+    <property>
+        <name>yarn.scheduler.capacity.root.dev.capacity</name>
+        <value>60</value>
+    </property>
+
+    <!--设置根调度队列dev可占最大容量为75%-->
+    <property>
+        <name>yarn.scheduler.capacity.root.dev.maximum-capacity</name>
+        <value>75</value>
+    </property>
+
+    <!--设置dev.eng与dev.science两个叶子队列在dev队列资源中所占资源比例为1：1-->
+    <property>
+        <name>yarn.scheduler.capacity.root.dev.eng.capacity</name>
+        <value>50</value>
+    </property>
+    <property>
+        <name>yarn.scheduler.capacity.root.dev.science.capacity</name>
+        <value>50</value>
+    </property>
+</configuration>

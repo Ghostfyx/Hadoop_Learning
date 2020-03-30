@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<allocations>
+    <defaultQueueSchedulingPolicy>fair</defaultQueueSchedulingPolicy>
+
+    <queue name="prod">
+        <!--设置队列权重-->
+        <weight>40</weight>
+        <!--设置队列内部调度规则为先进先出-->
+        <schedulingPolicy>fifo</schedulingPolicy>
+    </queue>
+
+    <!--设置队列权重和队列层次，有eng和science两个叶子队列-->
+    <queue name="dev">
+        <weight>60</weight>
+        <queue name="eng" />
+        <queue name="science" />
+    </queue>
+
+    <!--设置YARN应用放置队列规则-->
+    <queuePlacementPolicy>
+        <!--把应用放进指定队列中，如果没有指定或队列不存在，则不匹配-->
+        <rule name="specified" created="false"/>
+        <!--resource manager会尝试把应用放在以用户的主Unix组名命名的队列中-->
+        <rule name="priamryGroup" created="false"/>
+        <!--兜底规则，当前规则都不匹配时，将启用该条规则-->
+        <rule name="default" queue="dev.eng"/>
+    </queuePlacementPolicy>
+</allocations>
