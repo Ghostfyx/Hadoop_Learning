@@ -17,7 +17,9 @@ public class MaxTemperatureMapper extends Mapper<LongWritable, Text, Text, IntWr
     private static final int MISSING = 9999;
 
     @Override
-    public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+    public void map(LongWritable key, Text value, Context context)
+            throws IOException, InterruptedException {
+
         String line = value.toString();
         String year = line.substring(15, 19);
         int airTemperature;
