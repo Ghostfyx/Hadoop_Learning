@@ -1,4 +1,4 @@
-package com.hadoop.learning.chap06;
+package com.hadoop.learning.chap06_mr_dev;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
