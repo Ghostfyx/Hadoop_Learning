@@ -24,7 +24,6 @@ import java.io.IOException;
  * @Date: 2020/4/8 6:29 AM
  */
 public class MaxTemperatureWithMultipleInputs extends Configured implements Tool {
-
     static class MetOfficeMaxTemperatureMapper
             extends Mapper<LongWritable, Text, Text, IntWritable> {
 
